@@ -1,0 +1,11 @@
+
+.background-canvas {
+  position: relative;
+  z-index: -1;
+}
+
+
+.content {
+  z-index: 1;
+  display: inline;
+}
