@@ -1,0 +1,19 @@
+
+.background-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Met le canvas en arrière-plan */
+}
+
+/* Styles pour d'autres éléments */
+.content {
+  padding: 10px;
+  z-index: 1;
+  display: inline;
+}
+
+.container {
+  position: relative; /* Nécessaire pour positionner les éléments enfants */
+
+}
