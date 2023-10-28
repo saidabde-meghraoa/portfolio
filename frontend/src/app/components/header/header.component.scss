@@ -6,7 +6,7 @@
 .nav-link {
    position: relative;
    font-weight: 600;
-   font-size: 1.4rem;
+   font-size: 1.3rem;
    color: white
 }
 
@@ -36,6 +36,7 @@
 }
 
 .sticky {
+   height: 50px;
    background-color: #1b376ca9;
    box-shadow: 0 10px 30px -10px rgba(51, 42, 170, 0.7);
    backdrop-filter: blur(5px) !important 
