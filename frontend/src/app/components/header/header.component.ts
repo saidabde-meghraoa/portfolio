@@ -11,7 +11,7 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-      window.addEventListener('scroll', this.onScroll);
+    window.addEventListener('scroll', this.onScroll);
   }
 
   onScroll = () => {
