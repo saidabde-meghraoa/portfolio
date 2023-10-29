@@ -1,4 +1,5 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { LanguageService } from "src/app/services/language/language.service"
 import * as AOS from 'aos';
 
 @Component({
@@ -6,12 +7,15 @@ import * as AOS from 'aos';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent implements OnInit {
   title = 'frontend';
 
-  constructor() { }
+  constructor(
+    private languageService: LanguageService
+  ) { }
 
-  ngAfterViewInit(): void {
+  ngOnInit(): void {
+    this.languageService.initLanguage()
     AOS.init({
       duration: 1000
     });
