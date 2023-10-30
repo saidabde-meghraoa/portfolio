@@ -7,8 +7,18 @@
     <!--  home main elements-->
     <div class="presentation">
       <div class="overview">
+        <p>{{"hey" | translate}}</p>
+        <h1 class="gelatine">
+          <span *ngFor="let letter of ('name' | translate).split()">
+            {{letter}}
+          </span>
+        </h1>
+        <p>{{"overview-text" | translate}}</p>
       </div>
+      <div>Buttons Here</div>
     </div>
+    <object data="./assets/welcome.svg"></object>
   </div>
 
 </div>
+
