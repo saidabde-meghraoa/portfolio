@@ -1,11 +1,94 @@
+.content {
+  display: flex;
+  justify-content: space-around;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+
+  & > object {
+    width: 35%;
+    height: 35%;
+    //margin-top: 20px;
+    align-self: center;
+  }
+
+  .presentation {
+    align-self: center;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 5;
+    color: aliceblue;
+
+    .overview {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: auto;
+      flex-grow: 3;
+      p {
+        align-self: center;
+        color: aqua;
+      }
+      text-align: center;
+    }
+  }
+
+  h1 {
+    font: 300 50px/1 courier;
+    white-space: nowrap;
+    color: whitesmoke;
+    font-weight: bold;
+  }
+
+}
 
 .background-canvas {
-  position: relative;
+  position: absolute;
+  left: 0%;
+  top: 0%;
   z-index: -1;
+  height: 100%;
+  width: 100%;
+}
+
+p {
+  //border-right: solid 3px rgba(0,255,0,.75);
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 1em;
+  color: rgba(255,255,255,.70);
+}
+
+/* Animation */
+p {
+  animation: animated-text 4s steps(29,end) 1s 1 normal both,
+  animated-cursor 600ms steps(29,end) infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 100%;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-right-color: rgba(0,255,0,.75);}
+  to{border-right-color: transparent;}
 }
 
 
-.content {
-  z-index: 1;
-  display: inline;
+.gelatine {
+  animation: gelatine 2.0s infinite;
+}
+@keyframes gelatine {
+  from, to { transform: scale(1, 1); }
+  25% { transform: scale(0.9, 1.1); }
+  50% { transform: scale(1.1, 0.9); }
+  75% { transform: scale(0.95, 1.05); }
 }
