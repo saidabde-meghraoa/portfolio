@@ -55,35 +55,35 @@ document.addEventListener("DOMContentLoaded", function() {
     return diameter/2;
   }
 
-  var Star = function() {
+  class Star {
+    constructor() {
 
-    this.orbitRadius = random(maxOrbit(w,h));
-    this.radius = random(60, this.orbitRadius) / 12;
-    this.orbitX = w / 2;
-    this.orbitY = h / 2;
-    this.timePassed = random(0, maxStars);
-    this.speed = random(this.orbitRadius) / 50000;
-    this.alpha = random(2, 10) / 10;
+      this.orbitRadius = random(maxOrbit(w, h));
+      this.radius = random(60, this.orbitRadius) / 12;
+      this.orbitX = w / 2;
+      this.orbitY = h / 2;
+      this.timePassed = random(0, maxStars);
+      this.speed = random(this.orbitRadius) / 200000;
+      this.alpha = random(2, 10) / 10;
 
-    count++;
-    stars[count] = this;
-  }
-
-  Star.prototype.draw = function() {
-    var x = Math.sin(this.timePassed) * this.orbitRadius + this.orbitX,
-      y = Math.cos(this.timePassed) * this.orbitRadius + this.orbitY,
-      twinkle = random(10);
-
-    if (twinkle === 1 && this.alpha > 0) {
-      this.alpha -= 0.05;
-    } else if (twinkle === 2 && this.alpha < 1) {
-      this.alpha += 0.05;
+      count++;
+      stars[count] = this;
     }
+    draw() {
+      var x = Math.sin(this.timePassed) * this.orbitRadius + this.orbitX, y = Math.cos(this.timePassed) * this.orbitRadius + this.orbitY, twinkle = random(10);
 
-    ctx.globalAlpha = this.alpha;
-    ctx.drawImage(canvas2, x - this.radius / 2, y - this.radius / 2, this.radius, this.radius);
-    this.timePassed += this.speed;
+      if (twinkle === 1 && this.alpha > 0) {
+        this.alpha -= 0.05;
+      } else if (twinkle === 2 && this.alpha < 1) {
+        this.alpha += 0.05;
+      }
+
+      ctx.globalAlpha = this.alpha;
+      ctx.drawImage(canvas2, x - this.radius / 2, y - this.radius / 2, this.radius, this.radius);
+      this.timePassed += this.speed;
+    }
   }
+
 
   for (var i = 0; i < maxStars; i++) {
     new Star();
