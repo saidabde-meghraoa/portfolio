@@ -1,11 +1,55 @@
 
-.background-canvas {
+.content {
+  display: flex;
+  justify-content: space-around;
+  height: 100vh;
+  overflow: hidden;
   position: relative;
-  z-index: -1;
+
+  & > object {
+    width: 35%;
+    height: 35%;
+    //margin-top: 20px;
+    align-self: center;
+  }
+
+  .presentation {
+    align-self: center;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 5;
+    color: aliceblue;
+
+    .overview {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: auto;
+      flex-grow: 3;
+      p {
+        align-self: center;
+        color: aqua;
+      }
+      text-align: center;
+    }
+  }
+
+  h1 {
+    font: 300 50px/1 courier;
+    white-space: nowrap;
+    color: whitesmoke;
+    font-weight: bold;
+  }
+
 }
 
-
-.content {
-  z-index: 1;
-  display: inline;
+.background-canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
 }
