@@ -13,7 +13,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from "./components/home/home.component";
-import { ProjectCardComponent } from './components/projects/project-card/project-card/project-card.component';
+import { ProjectCardComponent } from './components/projects/project-card/project-card.component';
 
 export function HttpLoaderFactory(http: HttpClient){
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
