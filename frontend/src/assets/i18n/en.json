@@ -5,5 +5,39 @@
    "contact": "Contact",
    "name": "Jhon Doe",
    "hey" : "Hey I'm",
-   "overview-text": "a Computer Science Engineering Student at ENSIMAG"
+   "overview-text": "a Computer Science Engineering Student at ENSIMAG",
+   "projects.info" : [
+      {
+         "title": "Web project",
+         "description": "Devloppement of a web application",
+         "images": [],
+         "technologies": [
+            "ReactJS",
+            "NodeJS",
+            "MySQL"
+         ]
+      },
+      {
+         "title": "Sofware project",
+         "description": "Devloppement of a compilator",
+         "images": [],
+         "technologies": [
+            "Java",
+            "Linux",
+            "Maven",
+            "Jacoco"
+         ]
+      },
+      {
+         "title": "Mobile Application",
+         "description": "Devloppement of a mobile Application",
+         "images": [],
+         "technologies": [
+            "React Native",
+            "NodeJS",
+            "Maven",
+            "Jacoco"
+         ]
+      }
+   ]
 }

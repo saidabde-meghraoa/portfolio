@@ -2,14 +2,18 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader'
 import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
-import {HomeComponent} from "./components/home/home.component";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+
+import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/header/header.component';
+import { HomeComponent } from "./components/home/home.component";
+import { ProjectCardComponent } from './components/projects/project-card/project-card/project-card.component';
 
 export function HttpLoaderFactory(http: HttpClient){
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -19,7 +23,8 @@ export function HttpLoaderFactory(http: HttpClient){
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    ProjectCardComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +38,9 @@ export function HttpLoaderFactory(http: HttpClient){
           useFactory: HttpLoaderFactory,
           deps: [HttpClient]
       }
-    })
+    }),
+    BrowserAnimationsModule,
+    CarouselModule
   ],
   providers: [TranslateService],
   bootstrap: [AppComponent]

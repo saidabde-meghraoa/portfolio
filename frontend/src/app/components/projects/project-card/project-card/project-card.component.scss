@@ -1,0 +1,65 @@
+$ImageWidth: 650px;
+$TechnologyColor: rgb(14, 227, 255);
+
+owl-carousel-o, .image-container {
+   width: $ImageWidth;
+}
+
+.image-container {
+   max-height: 320px;
+   overflow: auto;
+}
+
+.project-info {
+   margin-left: -70px;
+}
+
+.technologies {
+   position: relative;
+   z-index: 1;
+   display: flex;
+   flex-wrap: wrap;
+   margin-top: 25px;
+   list-style: none;
+}
+
+.technologies li {
+   color: $TechnologyColor;
+}
+
+.project-description {   
+   box-shadow: 0 10px 30px -10px rgba(80, 120, 200, 0.4);
+   // -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+   // transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+   border-radius: 3px;
+   position: relative;
+   z-index: 1;
+   padding: 25px;
+   background-color: #132950;
+   color: #a0a9c4;
+   font-size: 1.2rem;
+}
+
+ul li {
+   text-decoration: none;
+   display: inline-block;
+   position: relative;
+   color: $TechnologyColor;
+}
+
+ul li:after {
+   content: "";
+   display: block;
+   height: 1px;
+   bottom: 3px;
+   left: 50%;
+   position: absolute;
+   background: $TechnologyColor;
+   transition: width 0.4s ease 0s, left 0.4s ease 0s;
+   width: 0;
+}
+
+ul li:hover:after {
+   width: 100%;
+   left: 0;
+}
