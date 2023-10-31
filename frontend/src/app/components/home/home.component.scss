@@ -13,6 +13,7 @@
   }
 
   .presentation {
+    margin: 2em;
     align-self: center;
     font-size: large;
     display: flex;
@@ -33,10 +34,23 @@
       }
       text-align: center;
     }
+
+    .links {
+      fa-icon {
+        color: #83888d;
+      }
+      .github:hover {
+        color: #ffffff;
+      }
+      .linkedin:hover {
+        color: #0e76a8;
+      }
+    }
+
   }
 
   h1 {
-    font: 300 50px/1 courier;
+    font: 300 3.5em/1 courier;
     white-space: nowrap;
     color: whitesmoke;
     font-weight: bold;
@@ -58,7 +72,7 @@ p {
   white-space: nowrap;
   overflow: hidden;
   font-family: 'Source Code Pro', monospace;
-  font-size: 1em;
+  font-size: 1.3em;
   color: rgba(255,255,255,.70);
 }
 
@@ -91,4 +105,13 @@ p {
   25% { transform: scale(0.9, 1.1); }
   50% { transform: scale(1.1, 0.9); }
   75% { transform: scale(0.95, 1.05); }
+}
+
+//pulse
+.pulse:hover {
+  animation: pulse 1s infinite ease-in-out alternate;
+}
+@keyframes pulse {
+  from { transform: scale(0.8); }
+  to { transform: scale(1.2); }
 }

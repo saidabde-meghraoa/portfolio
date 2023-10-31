@@ -1,6 +1,5 @@
 
 <div class="home-container">
-
   <div class="content">
     <!-- background canvas -->
     <canvas id="canvas" class="background-canvas"></canvas>
@@ -15,7 +14,18 @@
         </h1>
         <p>{{"overview-text" | translate}}</p>
       </div>
-      <div>Buttons Here</div>
+      <div class="links">
+        <a href="https://linkedin.com">
+          <div class="pulse btn">
+            <fa-icon [icon]="faLinkedin" class="fa-4x linkedin"></fa-icon>
+          </div>
+        </a>
+        <a href="https://github.com">
+          <div class="pulse btn">
+            <fa-icon [icon]="faGithub" class="fa-4x github"></fa-icon>
+          </div>
+        </a>
+      </div>
     </div>
     <object data="./assets/welcome.svg"></object>
   </div>
