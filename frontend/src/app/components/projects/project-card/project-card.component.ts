@@ -7,7 +7,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./project-card.component.scss']
 })
 export class ProjectCardComponent {
-  @Input() projectID!: string;
+  @Input() projectID!: number;
   @Input() title!: string;
   @Input() description!: string;
   @Input() images!: string[];

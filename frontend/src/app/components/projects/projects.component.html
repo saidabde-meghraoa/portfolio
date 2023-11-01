@@ -1,0 +1,16 @@
+<section class="projects">
+   <div class="container">
+      <div>
+         <h1 class="text-center text-white fw-bolder" data-aos="fade-up">{{"projects.header" | translate }}</h1>
+      </div>
+      <div *ngFor="let project of 'projects.data' | translate; let i = index" class="project" data-aos="fade-up" data-aos-delay="600">
+         <app-project-card
+            [projectID]="i"
+            [title]="project.title"
+            [description]="project.description"
+            [images]="project.images"
+            [technologies]="project.technologies">
+         </app-project-card>
+      </div>
+   </div>
+</section>
