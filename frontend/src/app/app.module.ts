@@ -14,6 +14,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from "./components/home/home.component";
 import { ProjectCardComponent } from './components/projects/project-card/project-card.component';
+import { ProjectsComponent } from './components/projects/projects.component';
 
 export function HttpLoaderFactory(http: HttpClient){
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -24,7 +25,8 @@ export function HttpLoaderFactory(http: HttpClient){
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    ProjectCardComponent
+    ProjectCardComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,

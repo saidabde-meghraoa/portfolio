@@ -1,6 +1,6 @@
 .navbar {
    padding-block: 2.3rem;
-   height: 60px;
+   height: 0;
    transition: all 0.25s ease-out;
 }
  
@@ -14,7 +14,7 @@
 .nav-link::after {
    content: "";
    position: relative;
-   bottom: 3px;
+   bottom: 0px;
    display: block;
    left: 0;
    height: 4px;
