@@ -61,3 +61,22 @@ ul li:hover:after {
    width: 100%;
    left: 0;
 }
+
+/* Scrollbar for navigator like Google Chrome and Safari */
+
+::-webkit-scrollbar {
+   width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+   background: #8d8d8d;
+   border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+   background: #616161;
+}
+
+::-webkit-scrollbar-track {
+   background: #292929;
+}
