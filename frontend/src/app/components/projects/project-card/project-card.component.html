@@ -1,5 +1,5 @@
 <div class="d-flex">
-   <owl-carousel-o [options]="customOptions">
+   <owl-carousel-o *ngIf="projectID % 2 == 0" [options]="customOptions">
       <ng-container *ngFor="let image of images">
           <ng-template carouselSlide>
               <div class="image-container">
@@ -8,17 +8,26 @@
           </ng-template>
       </ng-container>
    </owl-carousel-o>
-   <div class="project-info d-table w-50 h-100">
+   <div class="d-table w-50 h-100" [class.project-info-right]="projectID % 2 === 0" [class.project-info-left]="projectID % 2 !== 0">
       <div class="d-table-cell align-middle">
-          <h4 class="text-end fs-2 text-white mb-4">{{title}}</h4>
+          <h4 class="fs-2 text-white mb-4" [class.text-end]="projectID % 2 === 0">{{title}}</h4>
           <div class="project-description">
               <p class="mb-0">{{description}}</p>
           </div>
-          <ul class="technologies justify-content-end">
-              <li *ngFor='let technology of technologies' class="ms-3 fw-bold">
+          <ul class="technologies ps-0" [class.justify-content-end]="projectID % 2 === 0">
+              <li *ngFor="let technology of technologies" class="ms-3 fw-bold">
                 {{technology}}
               </li>
           </ul>
       </div>
    </div>
+   <owl-carousel-o *ngIf="projectID % 2 !== 0" [options]="customOptions">
+    <ng-container *ngFor="let image of images">
+        <ng-template carouselSlide>
+            <div class="image-container">
+                <img class="rounded" [src]="image" [alt]="title">
+            </div>
+        </ng-template>
+    </ng-container>
+ </owl-carousel-o>
 </div>
