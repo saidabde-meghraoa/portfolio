@@ -10,8 +10,16 @@ owl-carousel-o, .image-container {
    overflow: auto;
 }
 
-.project-info {
+.project-info-right, .project-info-left {
+   z-index: 2;
+}
+
+.project-info-right {
    margin-left: -70px;
+}
+
+.project-info-left {
+   margin-right: -70px;
 }
 
 .technologies {
@@ -23,15 +31,10 @@ owl-carousel-o, .image-container {
    list-style: none;
 }
 
-.technologies li {
-   color: $TechnologyColor;
-}
-
 .project-description {   
    box-shadow: 0 10px 30px -10px rgba(80, 120, 200, 0.4);
    border-radius: 3px;
    position: relative;
-   z-index: 1;
    padding: 25px;
    background-color: #132950;
    color: #a0a9c4;
