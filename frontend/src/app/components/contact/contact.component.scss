@@ -1,0 +1,38 @@
+$TitleColor: darkblue;
+
+.contact {
+   display: grid;
+   clip-path: polygon(0 0, 50% 10vh, 100% 0, 100% 100%, 0 100%);
+   padding-block: 12rem 6rem;
+   place-items: center;
+   background-color: gainsboro;
+}
+
+.contact-container {
+   width: 40vw;
+}
+
+.title {
+   font-size: 60px;
+   font-weight: 600;
+   color: $TitleColor
+}
+
+.title::after {
+   content: "";
+   display: block;
+   position: absolute;
+   height: 4px;
+   background-color: $TitleColor;
+   left: 50%;
+   width: 50%;
+   transform: translateX(-50%)
+}
+
+.btn:not(:hover) {
+   background-color: cornsilk;
+}
+
+.btn, .contact {
+   font-size: 30px;
+}
