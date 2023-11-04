@@ -17,6 +17,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.translateService.addLangs(["fr", "en"])
     this.translateService.setDefaultLang("en")
+    this.translateService.use('en');
     AOS.init({
       duration: 1000
     });
