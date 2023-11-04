@@ -67,5 +67,11 @@
       "img" : "third.svg",
       "body" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took "
     }
-  ]
+  ],
+  "mail": {
+   "mailto": "example@portfolio.com",
+   "title": "Get in touch!",
+   "description": "I would love to hear from you about any new opportunities. Feel free to get in touch, and I will respond when I see your message.",
+   "send": "Say Hello 👋"
+  }
 }
