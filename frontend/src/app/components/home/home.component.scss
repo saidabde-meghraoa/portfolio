@@ -1,60 +1,63 @@
 .content {
-  display: flex;
-  justify-content: space-around;
   height: 100vh;
   overflow: hidden;
   position: relative;
-
-  & > object {
-    width: 45%;
-    height: 50%;
-    //margin-top: 20px;
-    align-self: center;
-  }
-
-  .presentation {
-    margin: 2em;
-    align-self: center;
-    font-size: large;
+  .wrapper {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 5;
-    color: aliceblue;
+    justify-content: space-around;
 
-    .overview {
+    & > object {
+      width: 45%;
+      height: 50%;
+      //margin-top: 20px;
+      align-self: center;
+    }
+
+    .presentation {
+      margin: 2em;
+      align-self: center;
+      font-size: large;
       display: flex;
       flex-direction: column;
-      height: 100%;
-      width: auto;
-      flex-grow: 3;
-      p {
-        align-self: center;
-        color: aqua;
+      align-items: center;
+      z-index: 5;
+      color: aliceblue;
+
+      .overview {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: auto;
+        flex-grow: 3;
+        p {
+          align-self: center;
+          color: aqua;
+        }
+        text-align: center;
       }
-      text-align: center;
+
+      .links {
+        fa-icon {
+          color: #83888d;
+        }
+        .github:hover {
+          color: #ffffff;
+        }
+        .linkedin:hover {
+          color: #0e76a8;
+        }
+      }
     }
 
-    .links {
-      fa-icon {
-        color: #83888d;
-      }
-      .github:hover {
-        color: #ffffff;
-      }
-      .linkedin:hover {
-        color: #0e76a8;
-      }
+
+    h1 {
+      font: 300 3.5em/1 courier;
+      white-space: nowrap;
+      color: whitesmoke;
+      font-weight: bold;
     }
   }
 
-
-  h1 {
-    font: 300 3.5em/1 courier;
-    white-space: nowrap;
-    color: whitesmoke;
-    font-weight: bold;
-  }
 
 }
 
