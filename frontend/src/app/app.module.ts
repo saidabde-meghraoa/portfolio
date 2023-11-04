@@ -15,6 +15,10 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from "./components/home/home.component";
 import { ProjectCardComponent } from './components/projects/project-card/project-card.component';
 import { ProjectsComponent } from './components/projects/projects.component';
+import { AboutComponent } from './components/about/about.component';
+import { AboutCardComponent } from './components/about/about-card/about-card.component';
+import {NgOptimizedImage} from "@angular/common";
+import { SkillsComponent } from './components/about/skills/skills.component';
 
 export function HttpLoaderFactory(http: HttpClient){
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -26,7 +30,10 @@ export function HttpLoaderFactory(http: HttpClient){
     HeaderComponent,
     HomeComponent,
     ProjectCardComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    AboutComponent,
+    AboutCardComponent,
+    SkillsComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,13 +43,14 @@ export function HttpLoaderFactory(http: HttpClient){
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {
-          provide: TranslateLoader,
-          useFactory: HttpLoaderFactory,
-          deps: [HttpClient]
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
       }
     }),
     BrowserAnimationsModule,
-    CarouselModule
+    CarouselModule,
+    NgOptimizedImage
   ],
   providers: [TranslateService],
   bootstrap: [AppComponent]

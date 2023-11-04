@@ -1,0 +1,20 @@
+<div class="container m-auto mt-7 p-5" id="about">
+  <h1 class="text-center text-white fw-bolder m-3" data-aos="fade-up">
+    {{"about.header" | translate}}
+  </h1>
+  <div class="d-flex justify-content-center" data-aos="fade-up">
+    <app-about-card *ngFor="let item of 'about.data' | translate"
+                    [img]="item.img"
+                    [title]="item.title"
+                    [body]="item.body"
+    />
+  </div>
+</div>
+
+<div class="m-auto">
+  <app-skills/>
+</div>
+
+
+
+

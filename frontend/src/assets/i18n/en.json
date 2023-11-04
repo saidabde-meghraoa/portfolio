@@ -49,5 +49,23 @@
             "Jacoco"
          ]
       }
-   ]
+   ],
+  "about.header": "About",
+  "about.data" : [
+    {
+      "title" : "first",
+      "img" : "first.svg",
+      "body" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took "
+    },
+    {
+      "title" : "second",
+      "img" : "second.svg",
+      "body" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took "
+    },
+    {
+      "title" : "third",
+      "img" : "third.svg",
+      "body" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took "
+    }
+  ]
 }
