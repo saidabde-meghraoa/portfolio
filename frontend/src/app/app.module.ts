@@ -19,6 +19,7 @@ import { AboutComponent } from './components/about/about.component';
 import { AboutCardComponent } from './components/about/about-card/about-card.component';
 import {NgOptimizedImage} from "@angular/common";
 import { SkillsComponent } from './components/about/skills/skills.component';
+import { MouseComponent } from './components/home/mouse/mouse.component';
 
 export function HttpLoaderFactory(http: HttpClient){
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -34,6 +35,7 @@ export function HttpLoaderFactory(http: HttpClient){
     AboutComponent,
     AboutCardComponent,
     SkillsComponent,
+    MouseComponent,
   ],
   imports: [
     BrowserModule,
