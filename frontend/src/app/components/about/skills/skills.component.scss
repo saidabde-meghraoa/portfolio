@@ -1,16 +1,12 @@
 $orbitPathScale: 2.8;
-$orbitAngle: 70deg;
+$orbitAngle: 60deg;
 $skillSvgScale: 3;
 
 .sec-skills {
   $self: &;
-  //height: 100vh;
 
   /* Container for the orbiting skills animation */
   &__showcase {
-    height: 100%;
-    width: 100%;
-    margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
