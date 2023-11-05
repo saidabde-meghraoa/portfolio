@@ -1,40 +1,16 @@
-<div class="orbit mt-0">
-  <ul class="orbit-wrap">
-    <li class="orbit-center">
-      <fa-icon [icon]="faCode" class="orbit-center__icon fa fa-code"/>
-    </li>
-    <li>
-      <ul class="ring-0">
-        <li><fa-icon [icon]="faGit" class="orbit-icon fa fa-git"/></li>
-        <li><fa-icon [icon]="faMeetup" class="orbit-icon fa fa-meetup"/></li>
-        <li><fa-icon [icon]="faFreeCodeCamp" class="orbit-icon fa fa-free-code-camp"/></li>
-        <li><fa-icon [icon]="faCodepen" class="orbit-icon fa fa-codepen"/></li>
-      </ul>
-    </li>
+<div class="sec-skills">
+  <div class="sec-skills__showcase">
 
-    <li>
-      <ul class="ring-1">
-        <li><fa-icon [icon]="faHtml5" class="orbit-icon fa fa-html5"/></li>
-        <li><fa-icon [icon]="faCss3" class="orbit-icon fa fa-css3"/></li>
-      </ul>
-    </li>
-    <li>
-      <ul class="ring-2">
-        <li><fa-icon [icon]="faWindows" class="orbit-icon fa fa-windows"/></li>
-        <li><fa-icon [icon]="faEdge" class="orbit-icon fa fa-edge"/></li>
-        <li><fa-icon [icon]="faLinux" class="orbit-icon fa fa-linux"/></li>
-        <li><fa-icon [icon]="faApple" class="orbit-icon fa fa-apple "/></li>
-        <li><fa-icon [icon]="faChrome" class="orbit-icon fa fa-chrome"/></li>
-        <li><fa-icon [icon]="faAndroid" class="orbit-icon fa fa-android"/></li>
-        <li><fa-icon [icon]="faFirefox" class="orbit-icon fa fa-firefox"/></li>
-      </ul>
-    </li>
-    <li>
-      <ul class="ring-3">
-        <li><fa-icon [icon]="faCoffee" class="orbit-icon fa fa-coffee"/></li>
-        <li><fa-icon [icon]="faTerminal" class="orbit-icon fa fa-terminal"/></li>
-        <li><fa-icon [icon]="faHeart" class="orbit-icon fa fa-heart-o"/></li>
-      </ul>
-    </li>
-  </ul>
+    <div class="sec-skills__skill-orbit-path sec-skills--skill-orbit-path-rotate">
+      <ng-container *ngFor="let skill of 'about.skills' | translate">
+        <div [class]="'sec-skills--skill-rotate sec-skills__skill-' + skill.ident">
+          <i [class]="'fa-brands fa-8x fa-' + skill.name"></i>
+        </div>
+      </ng-container>
+    </div>
+
+    <div class="sec-skills__skill-title">
+      <h2>Skills</h2>
+    </div>
+  </div>
 </div>

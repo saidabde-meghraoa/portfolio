@@ -1,193 +1,262 @@
-$orbitItemSize: 1.6em;
-$map: (ring-0: 4, ring-1: 3, ring-2: 8, ring-3: 3);
-$lastRing: 3;
+$orbitPathScale: 2.8;
+$orbitAngle: 70deg;
+$skillSvgScale: 3;
 
-* {
-  box-sizing: border-box;
-}
+.sec-skills {
+  $self: &;
+  //height: 100vh;
 
+  /* Container for the orbiting skills animation */
+  &__showcase {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotateX($orbitAngle); // Gives the illusion of the orbit angle
+    transform-style: preserve-3d; // preserves all the content within this (skills) as 3D
 
-.orbit {
-  float: left;
-  width: 100%;
-  min-width: 100vw;
-  min-height: 100vh;
-  position: relative;
-}
+    /* Hidden orbit path of skills around the HTML image */
+    #{$self}__skill-orbit-path {
+      position: relative;
+      width: calc(300px * #{$orbitPathScale});
+      height: calc(300px * #{$orbitPathScale});
+      border-radius: 100%;
+      transform-style: preserve-3d;
+      animation: spin-right 30s linear infinite;
 
-.orbit-icon {
-  width: $orbitItemSize;
-  height: $orbitItemSize;
-  line-height: $orbitItemSize;
-  font-size: 1.2em;
-  border-radius: 50%;
-  background: #ccc;
-  color: #fff;
-  text-align: center;
-  display: block;
-}
-
-.orbit-wrap {
-  height: 40em;
-  list-style: none;
-  font-size: 1.3em;
-
-  > li {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-
-    &:hover {
-      ul {
-        border-width: 2px;
-        border-color: #fff;
+      /* Skills image counter rotation to keep upright */
+      #{$self}--skill-rotate {
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotateX(-95deg);
+        transform-style: preserve-3d;
+        animation: spin-left 30s linear infinite;
       }
-      ~ li ul {
-        border-color: rgba(255, 255, 255, 0.2);
-        li {
-          opacity: 0.4;
-        }
+
+      #{$self}--skill-rotate > svg {
+        transform: scale($skillSvgScale);
+      }
+
+      #{$self}__skill-first {
+        bottom: 0;
+        left: 50%;
+      }
+
+      #{$self}__skill-sec {
+        bottom: 5%;
+        left: 22%;
+      }
+
+      #{$self}__skill-third {
+        bottom: 25%;
+        left: 5%;
+      }
+
+      #{$self}__skill-forth {
+        bottom: 50%;
+        left: 0%;
+      }
+
+      #{$self}__skill-fifth {
+        top: 25%;
+        left: 5%;
+      }
+
+      #{$self}__skill-sixth {
+        top: 5%;
+        left: 25%;
+      }
+
+      #{$self}__skill-seventh {
+        top: 0;
+        left: 50%;
+      }
+
+      #{$self}__skill-eighth {
+        top: 5%;
+        right: 25%;
+      }
+
+      #{$self}__skill-ninth {
+        top: 25%;
+        right: 5%;
+      }
+
+      #{$self}__skill-tenth {
+        top: 50%;
+        right: 0%;
+      }
+
+      #{$self}__skill-eleventh {
+        bottom: 25%;
+        right: 5%;
+      }
+
+      #{$self}__skill-twelfth {
+        bottom: 5%;
+        right: 22%;
       }
     }
 
+    /* Center the HTML image at the center of orbit */
+    #{$self}__skill-title {
+      position: absolute;
+      transform: rotateX(-$orbitAngle);
+      h2 {
+        font: 300 3.5em/1 courier;
+        color: whitesmoke;
+        font-weight: bold;
+        color: aqua;
+      }
+    }
   }
-}
 
-ul[class^=ring] {
-  @extend %ring;
-  transition: all 300ms ease-in-out;
-  li {
-    @extend %orbiting-object;
-    transition: all 300ms ease-in-out;
+  /* ---------- Animation ---------- */
+  @keyframes spin-right {
+    0% {
+      transform: rotateZ(0);
+    }
+    100% {
+      transform: rotateZ(360deg);
+    }
   }
-}
 
-@mixin orbit-item($numItems, $numRing) {
-  @for $s from 1 through $numItems {
-    // Spread items over the ring
-    $deg: calc(380deg / $numItems);
-
-    .ring-#{$numRing} > *:nth-of-type(#{$s}) {
-      transform: rotate($s * $deg) translate(12.5em - ($numRing * 2.5)) rotate(-$s * $deg);
+  @keyframes spin-left {
+    0% {
+      transform: rotateX(-90deg) rotateY(-360deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg);
     }
   }
 }
 
-// Render rings
-@for $i from 0 through $lastRing {
-  .ring-#{$i} {
-    // decrease each ring in size
-    width: 25em - ($i * 5);
-    height: 25em - ($i * 5);
-    animation: clockwiseRotate 35s - ($i * 5) linear infinite;
 
-    i {
-      animation: counterClockwiseRotate 35s - ($i * 5) linear infinite;
-    }
+
+
+// Brand Colors
+$fa-android: #a4c639;
+$fa-codepen: #000;
+$fa-css3-alt: #1680C0;
+$fa-git: #333;
+$fa-html5: #e34f26;
+$fa-linux: #333333;
+$fa-medium: #000;
+$fa-slack: #0f7965;
+$fa-stack-overflow: #e86a0a;
+$fa-trello: #256a92;
+$fa-wordpress: #21759b;
+
+
+
+.fa-brands {
+  &.fa-android {
+    color: $fa-android;
   }
 
-  @include orbit-item(map-get($map, ring-#{$i}), $i);
-}
+  &.fa-codepen {
+    color: $fa-codepen;
+  }
 
+  &.fa-css3-alt {
+    color: $fa-css3-alt;
+  }
 
-%ring {
-  border: solid 1px rgba(33, 150, 243, 0.8);
-  position: relative;
-  padding: 0;
-  border-radius: 50%;
-  list-style: none;
-  box-sizing: content-box;
-}
+  &.fa-git {
+    color: $fa-git;
+  }
 
-%orbiting-object {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: $orbitItemSize;
-  height: $orbitItemSize;
-  margin: calc(-1 * $orbitItemSize / 2);
-}
+  &.fa-html5 {
+    color: $fa-html5;
+  }
 
-/*
-  center;
-*/
-.orbit-center {
-  z-index: 5;
-  font-size: 2em;
-  width: 1.8em;
-  height: 1.8em;
-  line-height: 1.8em;
-  text-align: center;
-  background: hotpink;
-  border-radius: 50%;
+  &.fa-linux {
+    color: $fa-linux;
+  }
 
-  &:hover .orbit-center__icon {
-    transform: rotateZ(0deg);
+  &.fa-medium {
+    color: $fa-medium;
+  }
+
+  &.fa-slack {
+    color: $fa-slack;
+  }
+
+  &.fa-stack-overflow {
+    color: $fa-stack-overflow;
+  }
+
+  &.fa-trello {
+    color: $fa-trello;
+  }
+
+  &.fa-wordpress {
+    color: $fa-wordpress;
+  }
+
+  &.fa-react {
+    color: #61DAFB;
+  }
+
+  /* Couleur pour l'icône Angular */
+  &.fa-angular {
+    color: #B52E31;
+  }
+
+  /* Couleur pour l'icône Java */
+  &.fa-java {
+    color: #007396;
+  }
+
+  /* Couleur pour l'icône JavaScript */
+  &.fa-js {
+    color: #F7DF1E;
+  }
+
+  /* Couleur pour l'icône Python */
+  &.fa-python {
+    color: #3776AB;
+  }
+
+  /* Couleur pour l'icône Ruby */
+  &.fa-ruby {
+    color: #CC342D;
+  }
+
+  /* Couleur pour l'icône React */
+  &.fa-react {
+    color: #61DAFB;
+  }
+
+  /* Couleur pour l'icône Vue.js */
+  &.fa-vuejs {
+    color: #41B883;
+  }
+
+  /* Couleur pour l'icône Node.js */
+  &.fa-node-js {
+    color: #339933;
+  }
+
+  /* Couleur pour l'icône Laravel */
+  &.fa-laravel {
+    color: #FF2D20;
+  }
+
+  /* Couleur pour l'icône PHP */
+  &.fa-php {
+    color: #4F5D95;
+  }
+
+  /* Couleur pour l'icône GIT */
+  &.fa-git {
+    color: #F05032;
   }
 }
-.orbit-center__icon {
-  transform: rotateZ(-360deg);
-  transition: all 300ms ease-in-out;
-}
-.orbit-wrap > li.orbit-center:hover ~ li > ul {
-  width: 0;
-  height: 0;
-  * {
-    transform: translate(0, 0);
-  }
-}
-
-/*
-animations
-*/
-@keyframes clockwiseRotate {
-  from {
-    transform: rotate(0deg)
-  }
-  to {
-    transform: rotate(360deg)
-  }
-}
-
-@keyframes counterClockwiseRotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(-360deg);
-  }
-}
-
-/*
-icons
-*/
-$icons : (
-    ('heart-o', #b71c1c, white),
-    ('coffee', #4CAF50, #CDDC39),
-    ('safari', white, darkslateblue),
-    ('firefox', #1565c0, #ff8f00),
-    ('chrome', #fbc02d, #ef6c00),
-    ('edge', #03a9f4, white),
-    ('android', snow, limegreen),
-    ('apple', #444, white),
-    ('linux', white, #222),
-    ('windows', white, #03a9f4),
-    ('terminal', #222, #fff),
-    ('html5', white, #e65100),
-    ('css3', white, #2196f3),
-    ('git', #222, white),
-    ('free-code-camp', green, white),
-    ('meetup', red, white),
-    ('podcast', red, white),
-    ('codepen', #333, white)
-);
-
-@each $icon in $icons {
-  .fa-#{nth($icon, 1)} {
-    background: nth($icon, 2);
-    color: nth($icon, 3);
-  }
-}
-

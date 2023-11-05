@@ -68,6 +68,56 @@
       "body" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took "
     }
   ],
+  "about.skills": [
+    {
+      "name": "vuejs",
+      "ident": "first"
+    },
+    {
+      "name": "java",
+      "ident": "sec"
+    },
+    {
+      "name": "js",
+      "ident": "third"
+    },
+    {
+      "name": "python",
+      "ident": "forth"
+    },
+    {
+      "name": "react",
+      "ident": "fifth"
+    },
+    {
+      "name": "angular",
+      "ident": "sixth"
+    },
+    {
+      "name": "php",
+      "ident": "seventh"
+    },
+    {
+      "name": "html5",
+      "ident": "eighth"
+    },
+    {
+      "name": "css3-alt",
+      "ident": "ninth"
+    },
+    {
+      "name": "node-js",
+      "ident": "tenth"
+    },
+    {
+      "name": "laravel",
+      "ident": "eleventh"
+    },
+    {
+      "name": "git",
+      "ident": "twelfth"
+    }
+  ],
   "mail": {
    "mailto": "example@portfolio.com",
    "title": "Get in touch!",
