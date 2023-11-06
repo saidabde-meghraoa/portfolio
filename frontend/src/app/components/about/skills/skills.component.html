@@ -2,8 +2,11 @@
   <div class="sec-skills__showcase">
 
     <div class="sec-skills__skill-orbit-path sec-skills--skill-orbit-path-rotate">
-      <ng-container *ngFor="let skill of 'about.skills' | translate">
-        <div [class]="'sec-skills--skill-rotate sec-skills__skill-' + skill.ident">
+<!--
+let index of Array.from({length: 'about.skills.length'})
+-->
+      <ng-container *ngFor="let skill of ('about.skills' | translate); let index = index">
+        <div [class]="'sec-skills--skill-rotate sec-skills__skill-' + index">
           <i [class]="'fa-brands fa-8x fa-' + skill.name"></i>
         </div>
       </ng-container>

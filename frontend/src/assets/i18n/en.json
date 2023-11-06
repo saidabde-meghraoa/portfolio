@@ -75,52 +75,40 @@
   "about.skill.header": "Skills",
   "about.skills": [
     {
-      "name": "vuejs",
-      "ident": "first"
+      "name": "vuejs"
     },
     {
-      "name": "java",
-      "ident": "sec"
+      "name": "java"
     },
     {
-      "name": "js",
-      "ident": "third"
+      "name": "js"
     },
     {
-      "name": "python",
-      "ident": "forth"
+      "name": "python"
     },
     {
-      "name": "react",
-      "ident": "fifth"
+      "name": "react"
     },
     {
-      "name": "angular",
-      "ident": "sixth"
+      "name": "angular"
     },
     {
-      "name": "php",
-      "ident": "seventh"
+      "name": "php"
     },
     {
-      "name": "html5",
-      "ident": "eighth"
+      "name": "html5"
     },
     {
-      "name": "css3-alt",
-      "ident": "ninth"
+      "name": "css3-alt"
     },
     {
-      "name": "node-js",
-      "ident": "tenth"
+      "name": "node-js"
     },
     {
-      "name": "laravel",
-      "ident": "eleventh"
+      "name": "laravel"
     },
     {
-      "name": "git",
-      "ident": "twelfth"
+      "name": "git"
     }
   ],
   "mail": {
