@@ -3,6 +3,7 @@ import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faChartLine } from '@fortawesome/free-solid-svg-icons';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -16,7 +17,7 @@ export class HeaderComponent implements OnInit {
   faEnvelope = faEnvelope;
   faChartLine = faChartLine;
 
-  constructor() { }
+  constructor(private translate: TranslateService) { }
 
   ngOnInit(): void {
     window.addEventListener('scroll', this.onScroll);
@@ -28,5 +29,10 @@ export class HeaderComponent implements OnInit {
     } else {
       this.isSticky = false;
     }
+  }
+
+  downloadCV() {
+    const resumeLink = this.translate.instant('resume.location')
+    window.open(resumeLink, "_blank")
   }
 }

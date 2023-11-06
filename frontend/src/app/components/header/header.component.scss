@@ -1,3 +1,5 @@
+$NavItemMargin: 40px;
+
 .navbar {
    padding-block: 2.3rem;
    height: 0;
@@ -29,7 +31,7 @@
 }
 
 .nav-item {
-   margin-left: 40px
+   margin-left: $NavItemMargin
 }
 
 .nav-link:hover::after {
@@ -41,5 +43,9 @@
    background-color: #1b376ca9;
    box-shadow: 0 10px 30px -10px rgba(51, 42, 170, 0.7);
    backdrop-filter: blur(5px) !important 
+}
+
+button {
+   margin-right: $NavItemMargin
 }
 
