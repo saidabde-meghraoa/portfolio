@@ -3,12 +3,10 @@
   overflow: hidden;
   position: relative;
   .wrapper {
-    display: flex;
-    justify-content: space-around;
-
+    height: 100%;
     & > object {
       width: 50%;
-      height: 60%;
+      height: 50%;
       //margin-top: 20px;
       align-self: center;
     }
@@ -39,13 +37,24 @@
       }
 
       .links {
-        fa-icon {
+        .icon-link {
+          text-decoration: none;
+          display: inline-block;
+          transition: transform 0.2s ease;
+        }
+
+        .icon-link:hover {
+          transform: scale(1.1);
+          animation: bounce 0.5s infinite alternate;
+        }
+
+        i {
           color: #83888d;
         }
-        .github:hover {
+        .fa-github:hover {
           color: #ffffff;
         }
-        .linkedin:hover {
+        .fa-linkedin:hover {
           color: #0e76a8;
         }
       }
@@ -60,7 +69,12 @@
     }
   }
 
-
+  .mouse {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+  }
 }
 
 .background-canvas {
@@ -112,11 +126,12 @@ p {
   75% { transform: scale(0.95, 1.05); }
 }
 
-//pulse
-.pulse:hover {
-  animation: pulse 1s infinite ease-in-out alternate;
-}
-@keyframes pulse {
-  from { transform: scale(0.8); }
-  to { transform: scale(1.2); }
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
 }

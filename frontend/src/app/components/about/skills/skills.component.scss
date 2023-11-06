@@ -40,62 +40,62 @@ $skillSvgScale: 3;
         transform: scale($skillSvgScale);
       }
 
-      #{$self}__skill-first {
+      #{$self}__skill-0 {
         bottom: 0;
         left: 50%;
       }
 
-      #{$self}__skill-sec {
+      #{$self}__skill-1 {
         bottom: 5%;
         left: 22%;
       }
 
-      #{$self}__skill-third {
+      #{$self}__skill-2 {
         bottom: 25%;
         left: 5%;
       }
 
-      #{$self}__skill-forth {
+      #{$self}__skill-3 {
         bottom: 50%;
-        left: 0%;
+        left: 0;
       }
 
-      #{$self}__skill-fifth {
+      #{$self}__skill-4 {
         top: 25%;
         left: 5%;
       }
 
-      #{$self}__skill-sixth {
+      #{$self}__skill-5 {
         top: 5%;
         left: 25%;
       }
 
-      #{$self}__skill-seventh {
+      #{$self}__skill-6 {
         top: 0;
         left: 50%;
       }
 
-      #{$self}__skill-eighth {
+      #{$self}__skill-7 {
         top: 5%;
         right: 25%;
       }
 
-      #{$self}__skill-ninth {
+      #{$self}__skill-8 {
         top: 25%;
         right: 5%;
       }
 
-      #{$self}__skill-tenth {
+      #{$self}__skill-9 {
         top: 50%;
-        right: 0%;
+        right: 0;
       }
 
-      #{$self}__skill-eleventh {
+      #{$self}__skill-10 {
         bottom: 25%;
         right: 5%;
       }
 
-      #{$self}__skill-twelfth {
+      #{$self}__skill-11 {
         bottom: 5%;
         right: 22%;
       }
@@ -107,7 +107,6 @@ $skillSvgScale: 3;
       transform: rotateX(-$orbitAngle);
       h2 {
         font: 300 3.5em/1 courier;
-        color: whitesmoke;
         font-weight: bold;
         color: aqua;
       }

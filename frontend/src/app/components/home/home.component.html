@@ -2,10 +2,10 @@
   <div class="d-flex flex-column justify-content-center">
     <!-- background canvas -->
     <canvas id="canvas" class="background-canvas"></canvas>
-    <div class="content d-flex flex-column justify-content-center">
+    <div class="content">
       <!--  home main elements-->
       <!--  presentation section  -->
-      <div class="d-flex justify-content-around wrapper">
+      <div class="d-flex justify-content-around wrapper m-auto">
         <div class="presentation">
           <!--  overview: name and presentation  -->
           <div class="overview" data-aos="fade-down" data-aos-duration="3000" data-aos-easing="linear">
@@ -20,16 +20,12 @@
           <!--    links      -->
           <div class="links d-flex justify-content-between" data-aos="fade-down" data-aos-duration="3000" data-aos-easing="linear">
             <!--   linkedin     -->
-            <a [href]="'links.linkedin' | translate">
-              <div class="pulse p-0 m-2">
-                <fa-icon [icon]="faLinkedin" class="fa-4x linkedin"></fa-icon>
-              </div>
+            <a [href]="'links.linkedin' | translate" class="m-2 icon-link">
+                <i class="fa-brands fa-linkedin fa-4x"></i>
             </a>
             <!--     github       -->
-            <a [href]="'links.github' | translate">
-              <div class="pulse p-0 m-2">
-                <fa-icon [icon]="faGithub" class="fa-4x github"></fa-icon>
-              </div>
+            <a [href]="'links.github' | translate" class="m-2 icon-link">
+                <i class="fa-brands fa-github fa-4x"></i>
             </a>
           </div>
         </div>
@@ -37,7 +33,7 @@
         <object data="./assets/welcome.svg"></object>
       </div>
       <!--  mouse    -->
-      <div class="m-auto">
+      <div class="m-auto mouse">
         <app-mouse/>
       </div>
     </div>
