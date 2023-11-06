@@ -124,9 +124,13 @@
     }
   ],
   "mail": {
-   "mailto": "example@portfolio.com",
-   "title": "Get in touch!",
-   "description": "I would love to hear from you about any new opportunities. Feel free to get in touch, and I will respond when I see your message.",
-   "send": "Say Hello 👋"
+    "mailto": "example@portfolio.com",
+    "title": "Get in touch!",
+    "description": "I would love to hear from you about any new opportunities. Feel free to get in touch, and I will respond when I see your message.",
+    "send": "Say Hello 👋"
+  },
+  "resume": {
+    "title": "Resume",
+    "location": "/assets/cv/cv.pdf"
   }
 }
