@@ -21,6 +21,7 @@ import {NgOptimizedImage} from "@angular/common";
 import { SkillsComponent } from './components/about/skills/skills.component';
 import { MouseComponent } from './components/home/mouse/mouse.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 export function HttpLoaderFactory(http: HttpClient){
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -38,6 +39,7 @@ export function HttpLoaderFactory(http: HttpClient){
     SkillsComponent,
     MouseComponent,
     ContactComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

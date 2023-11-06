@@ -1,0 +1,28 @@
+.hovered {
+  color: white;
+}
+
+.arrow {
+  border: 2px solid white;
+  border-radius: 100%;
+  color: white;
+  width: 3em;
+  height: 3em;
+  text-align: center;
+}
+.arrow:hover {
+  color: #060d19;
+  background-color: white;
+}
+
+.links {
+  a {
+    color: white;
+    margin: 4px 6px 4px 6px;
+    &:hover {
+      color: #72767c;
+      //background-color: white;
+    }
+  }
+
+}
