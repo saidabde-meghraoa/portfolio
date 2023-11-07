@@ -107,8 +107,12 @@ $skillSvgScale: 3;
       transform: rotateX(-$orbitAngle);
       h2 {
         font: 300 3.5em/1 courier;
-        font-weight: bold;
+        font-weight: bolder;
         color: aqua;
+        font-family: 'Righteous', serif;
+        text-shadow: .03em .03em 0 hsla(230, 40%, 50%, 1);
+        margin-block: 50px 120px;
+
       }
     }
   }
