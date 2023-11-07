@@ -1,7 +1,16 @@
+@import url(https://fonts.googleapis.com/css?family=Righteous);
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 
+}
+
+h1 {
+  color: white;
+  font-family: 'Righteous', serif;
+  text-shadow: .03em .03em 0 hsla(230, 40%, 50%, 1);
+  margin-block: 50px 120px;
 }
