@@ -7,7 +7,7 @@ let index of Array.from({length: 'about.skills.length'})
 -->
       <ng-container *ngFor="let skill of ('about.skills' | translate); let index = index">
         <div [class]="'sec-skills--skill-rotate sec-skills__skill-' + index">
-          <i [class]="'fa-brands fa-8x fa-' + skill.name"></i>
+          <i [class]="'fa-brands fa-8x fa-' + skill"></i>
         </div>
       </ng-container>
     </div>
