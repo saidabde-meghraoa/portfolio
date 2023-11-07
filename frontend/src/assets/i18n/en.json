@@ -74,42 +74,18 @@
   ],
   "about.skill.header": "Skills",
   "about.skills": [
-    {
-      "name": "vuejs"
-    },
-    {
-      "name": "java"
-    },
-    {
-      "name": "js"
-    },
-    {
-      "name": "python"
-    },
-    {
-      "name": "react"
-    },
-    {
-      "name": "angular"
-    },
-    {
-      "name": "php"
-    },
-    {
-      "name": "html5"
-    },
-    {
-      "name": "css3-alt"
-    },
-    {
-      "name": "node-js"
-    },
-    {
-      "name": "laravel"
-    },
-    {
-      "name": "git"
-    }
+    "vuejs",
+    "java",
+    "js",
+    "python",
+    "react",
+    "angular",
+    "php",
+    "html5",
+    "css3-alt",
+    "node-js",
+    "laravel",
+    "git"
   ],
   "mail": {
     "mailto": "example@portfolio.com",
