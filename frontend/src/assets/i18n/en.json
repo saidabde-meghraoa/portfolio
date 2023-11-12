@@ -6,8 +6,8 @@
    "name": "John Doe",
    "hey" : "Hey I'm",
    "links": {
-      "linkedin": "https://www.linkedin.com/in/abdennacer-saidi/",
-      "github": "https://github.com/saidabde"
+      "linkedin": "https://www.linkedin.com",
+      "github": "https://github.com"
    },
    "overview-text": "a Computer Science Engineering Student at ENSIMAG",
    "projects.header": "My Recent Work",
