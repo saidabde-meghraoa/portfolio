@@ -5,10 +5,10 @@
    "contact": "Contact",
    "name": "John Doe",
    "hey" : "Hey I'm",
-  "links": {
-    "linkedin": "https://www.linkedin.com/in/abdennacer-saidi/",
-    "github": "https://github.com/saidabde"
-  },
+   "links": {
+      "linkedin": "https://www.linkedin.com/in/abdennacer-saidi/",
+      "github": "https://github.com/saidabde"
+   },
    "overview-text": "a Computer Science Engineering Student at ENSIMAG",
    "projects.header": "My Recent Work",
    "projects.data" : [
@@ -54,47 +54,47 @@
          ]
       }
    ],
-  "about.header": "About",
-  "about.data" : [
-    {
+   "about.header": "About",
+   "about.data": [
+   {
       "title" : "first",
-      "img" : "first.svg",
+      "img" : "./assets/icons/first.svg",
       "body" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took "
-    },
-    {
+   },
+   {
       "title" : "second",
-      "img" : "second.svg",
+      "img" : "./assets/icons/second.svg",
       "body" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took "
-    },
-    {
+   },
+   {
       "title" : "third",
-      "img" : "third.svg",
+      "img" : "./assets/icons/third.svg",
       "body" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took "
-    }
-  ],
-  "about.skill.header": "Skills",
-  "about.skills": [
-    "vuejs",
-    "java",
-    "js",
-    "python",
-    "react",
-    "angular",
-    "php",
-    "html5",
-    "css3-alt",
-    "node-js",
-    "laravel",
-    "git"
-  ],
-  "mail": {
-    "mailto": "example@portfolio.com",
-    "title": "Get in touch!",
-    "description": "I would love to hear from you about any new opportunities. Feel free to get in touch, and I will respond when I see your message.",
-    "send": "Say Hello 👋"
-  },
-  "resume": {
-    "title": "Resume",
-    "location": "./assets/cv/cv.pdf"
-  }
+   }
+   ],
+   "about.skill.header": "Skills",
+   "about.skills": [
+      "vuejs",
+      "java",
+      "js",
+      "python",
+      "react",
+      "angular",
+      "php",
+      "html5",
+      "css3-alt",
+      "node-js",
+      "laravel",
+      "git"
+   ],
+   "mail": {
+      "mailto": "example@portfolio.com",
+      "title": "Get in touch!",
+      "description": "I would love to hear from you about any new opportunities. Feel free to get in touch, and I will respond when I see your message.",
+      "send": "Say Hello 👋"
+   },
+   "resume": {
+      "title": "Resume",
+      "location": "./assets/cv/cv.pdf"
+   }
 }
