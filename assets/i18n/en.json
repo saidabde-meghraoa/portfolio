@@ -16,8 +16,8 @@
          "title": "Lorem ipsum dolor",
          "description": "Maecenas maximus egestas metus a elementum. Morbi nec lorem imperdiet, tincidunt risus a, consequat augue. Donec feugiat porta lectus et euismod. Aliquam vel dignissim mi, vel congue metus.",
          "images": [
-            "/assets/images/project1.png",
-            "/assets/images/project2.png"
+            "./assets/images/project1.png",
+            "./assets/images/project2.png"
          ],
          "technologies": [
             "ReactJS",
@@ -29,8 +29,8 @@
          "title": "Nam sed lectus",
          "description": "Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin vestibulum tortor venenatis tellus egestas posuere. Nullam purus lacus, imperdiet sit amet porttitor ut, sagittis ut eros.",
          "images": [
-            "/assets/images/project1.png",
-            "/assets/images/project2.png"
+            "./assets/images/project1.png",
+            "./assets/images/project2.png"
          ],
          "technologies": [
             "Java",
@@ -43,8 +43,8 @@
          "title": "Mauris vestibulum scelerisque",
          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet velit ante. Nunc vitae velit malesuada, consequat neque ut, imperdiet dui. Quisque eleifend dapibus faucibus. Integer eget consequat turpis, ac varius justo. Nam at massa nec risus vehicula congue. Nunc quis placerat justo, in porttitor magna.",
          "images": [
-            "/assets/images/project1.png",
-            "/assets/images/project2.png"
+            "./assets/images/project1.png",
+            "./assets/images/project2.png"
          ],
          "technologies": [
             "React Native",
@@ -95,6 +95,6 @@
   },
   "resume": {
     "title": "Resume",
-    "location": "/assets/cv/cv.pdf"
+    "location": "./assets/cv/cv.pdf"
   }
 }
